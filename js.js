@@ -92,10 +92,6 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // About reveal
-  if (about.getBoundingClientRect().top < window.innerHeight * 0.7) {
-    about.classList.add("active");
-  }
 });
 
 const contactForm = document.getElementById("contactForm");
