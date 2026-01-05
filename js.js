@@ -118,7 +118,7 @@ let trailX = 0, trailY = 0;
 document.addEventListener('mousemove', e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-
+    
     dot.style.left = mouseX + 'px';
     dot.style.top = mouseY + 'px';
 });
@@ -191,8 +191,6 @@ document.querySelectorAll('.magnetic').forEach(btn => {
 
 // ABOUT reveal effect
 const about = document.querySelector('.about-max');
-
-
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect()
@@ -240,16 +238,35 @@ document.querySelector('.logo').addEventListener('mouseleave', () => {
 
 const isMobile = window.innerWidth < 768;
 
-if (isMobile) {
-  document.querySelector('#particles')?.remove();
-  document.body.classList.add('mobile-lite');
+if (!isMobile) {
+  drawParticles();
+  window.addEventListener("resize", resizeCanvas);
 }
 
-const hoverSound = new Audio("assets/hover.mp3");
-  
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
+
+// ===== DIGITAL CLOCK =====
+function updateClock() {
+  const now = new Date();
+
+  let h = now.getHours();
+  let m = now.getMinutes();
+  let s = now.getSeconds();
+
+  h = h < 10 ? "0" + h : h;
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
+
+  const clock = document.getElementById("clock");
+  if (clock) {
+    clock.textContent = `${h}:${m}:${s}`;
+  }
+}
+
+setInterval(updateClock, 1000);
+updateClock();
