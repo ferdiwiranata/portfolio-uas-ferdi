@@ -189,25 +189,19 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 36px;
+    gap: 10px;
 }
 
 .navbar ul li a {
     display: inline-block;
     transition: transform .15s ease, color .3s;
     position: relative;
-}
-
-.navbar ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 2px;
-    background: #00eaff;
-    box-shadow: 0 0 12px #00eaff;
-    transition: .3s;
+    padding: 8px;
+    margin-top: -2px;
+    background-color: #00f7ff1c;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .navbar ul li a:hover {
@@ -724,55 +718,6 @@ body {
     box-shadow: 0 0 25px rgba(0, 234, 255, 0.6);
 }
 
-/* DOT */
-.cursor-dot {
-    position: fixed;
-    width: 6px;
-    height: 6px;
-    background: #00eaff;
-    border-radius: 50%;
-    pointer-events: none;
-   z-index: var(--z-cursor);
-    transform: translate(-50%, -50%);
-}
-
-/* RING */
-.cursor-ring {
-    position: fixed;
-    width: 36px;
-    height: 36px;
-    border: 2px solid rgba(0,234,255,.7);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: calc(var(--z-cursor) - 1);
-    transform: translate(-50%, -50%);
-    transition: width .15s, height .15s, border .15s;
-    box-shadow: 0 0 20px rgba(0,234,255,.6);
-}
-
-/* TRAIL */
-.cursor-trail {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: calc(var(--z-cursor) - 2);
-    background: radial-gradient(circle, rgba(0,234,255,.4), transparent);
-    filter: blur(6px);
-    transform: translate(-50%, -50%);
-}
-
-/* HOVER EFFECT */
-.cursor-ring.active {
-    width: 60px;
-    height: 60px;
-    border-color: #ff006a;
-    box-shadow: 
-        0 0 35px rgba(255,0,106,.8),
-        0 0 60px rgba(0,234,255,.6);
-}
-
 /* BACKGROUND */
 .hero-bg {
     position: absolute;
@@ -828,6 +773,7 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn.primary {
@@ -946,6 +892,7 @@ body {
     background: transparent;
     border: 1px solid rgba(255,255,255,.4);
     color: #fff;
+    text-decoration: none;
 }
 
 /* SCROLL */
@@ -1419,6 +1366,11 @@ text-align:center;
   position: relative;
 }
 
+.project-img {
+    width: 400px;
+    height: 250px;
+}
+
 .project-card::before {
   pointer-events: none;
 }
@@ -1426,6 +1378,7 @@ text-align:center;
 .project-btn {
   position: relative;
   z-index: 10;
+  text-decoration: none;
 }
 
 .project-grid,

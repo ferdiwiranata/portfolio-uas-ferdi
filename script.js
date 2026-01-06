@@ -137,54 +137,6 @@ function animate() {
 }
 animate();
 
-/* MAGNETIC + GLITCH */
-document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        ring.classList.add('active', 'glitch');
-    });
-
-    el.addEventListener('mouseleave', () => {
-        ring.classList.remove('active', 'glitch');
-    });
-
-    el.addEventListener('mousemove', e => {
-        const rect = el.getBoundingClientRect();
-        const x = rect.left + rect.width / 2;
-        const y = rect.top + rect.height / 2;
-
-        ringX += (x - ringX) * 0.25;
-        ringY += (y - ringY) * 0.25;
-    });
-});
-
-/* ===== 3D PARALLAX ===== */
-const tilt = document.querySelector('[data-tilt]');
-
-document.addEventListener('mousemove', e => {
-    const x = (window.innerWidth / 2 - e.clientX) / 25;
-    const y = (window.innerHeight / 2 - e.clientY) / 25;
-
-    tilt.style.transform = `
-        rotateY(${x}deg)
-        rotateX(${y}deg)
-    `;
-});
-
-/* ===== MAGNETIC BUTTON ===== */
-document.querySelectorAll('.magnetic').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-
-        btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
-    });
-
-    btn.addEventListener('mouseleave', () => {
-        btn.style.transform = 'translate(0,0)';
-    });
-});
-
 // ABOUT reveal effect
 const about = document.querySelector('.about-max');
 document.querySelectorAll('.project-card').forEach(card => {

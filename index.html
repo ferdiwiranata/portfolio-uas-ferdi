@@ -1,222 +1,200 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Ferdi Wiranata</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Ferdi Wiranata</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-    <div class="global-bg"></div>
-    <canvas id="particles"></canvas>
 
-   <!-- CUSTOM CURSOR -->
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-<div class="cursor-trail"></div>
+  <div class="global-bg"></div>
+  <canvas id="particles"></canvas>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">FW</div>
-        <!-- JAM DIGITAL -->
-        <div id="clock" class="navbar-clock">00:00:00</div>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="cursor-trail"></div>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">FW</div>
+    <!-- JAM DIGITAL -->
+    <div id="clock" class="navbar-clock">00:00:00</div>
 
-    <!-- HOME -->
-<section class="hero god" id="home">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- FX -->
-    <div class="neon-wave"></div>
-    <div class="vignette"></div>
+  <!-- HOME -->
+  <section class="hero god" id="home">
 
     <!-- CONTENT -->
-    <div class="god-inner" data-tilt>
-        <span class="god-badge">CRAFTED DIGITAL EXPERIENCE</span>
-        <h1 class="god-title glitch" data-text="FERDI WIRANATA">
-            FERDI WIRANATA
-        </h1>
-        <p class="god-desc">
-          Creating <span>clean</span>, <span>bold</span>, 
-          <span>digital interfaces</span>
-        </p>
-        <div class="god-actions">
-            <button class="btn god-btn magnetic"
-                onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
-                ENTER PORTFOLIO
-            </button>
-            <a href="#project" class="btn god-outline magnetic">
-                VIEW WORK
-            </a>
-        </div>
+    <div class="god-inner">
+      <span class="god-badge">CRAFTED DIGITAL EXPERIENCE</span>
+      <h1 class="god-title glitch" data-text="FERDI WIRANATA">
+        FERDI WIRANATA
+      </h1>
+      <div class="god-actions">
+        <button class="btn god-btn magnetic"
+          onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
+          ENTER PORTFOLIO
+        </button>
+        <a href="#project" class="btn god-outline">
+          VIEW WORK
+        </a>
+      </div>
     </div>
+  </section>
 
-    <!-- SCROLL -->
-    <div class="god-scroll">
-        <div class="mouse"></div>
-        <span>SCROLL</span>
-    </div>
-</section>
-
-    <!-- ABOUT -->
+  <!-- ABOUT -->
   <section class="about-max" id="about">
 
-  <!-- BACKGROUND FX -->
-  <div class="about-glow"></div>
-  <div class="about-inner">
+    <!-- BACKGROUND FX -->
+    <div class="about-glow"></div>
+    <div class="about-inner">
 
-    <!-- FOTO -->
-    <div class="about-photo">
-      <img src="./picture/ME.jpeg" alt="ferdi Profile">
-      <span class="photo-ring"></span>
+      <!-- FOTO -->
+      <div class="about-photo">
+        <img src="./picture/ME.jpeg" alt="ferdi Profile">
+        <span class="photo-ring"></span>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="about-content">
+        <h2 class="about-title glitch" data-text="ABOUT ME">ABOUT ME</h2>
+        <p class="about-desc">
+          Saya berfokus membangun <span>frontend web</span>
+          dengan <span>desain yang rapi</span> dan
+          <span>pengalaman pengguna</span> yang matang. saat ini masih dalam tahap belajar
+          saya mengenal dasar-dasarnya untuk mencoba hal baru, dan belajar dari kesalahan supaya
+          bisa terus berkembang dan bikin karya sendiri.
+        </p>
+
+        <!-- STATS -->
+        <div class="about-stats">
+          <div class="stat">
+            <h3>1+</h3>
+            <p>Years Learning</p>
+          </div>
+          <div class="stat">
+            <h3>2</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat">
+            <h3>∞</h3>
+            <p>Creativity</p>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <a href="#project" class="btn magnetic">SEE MY PROJECTS</a>
+      </div>
     </div>
+  </section>
 
-    <!-- CONTENT -->
-    <div class="about-content">
-      <h2 class="about-title glitch" data-text="ABOUT ME">ABOUT ME</h2>
-      <p class="about-desc">
-      Saya berfokus membangun <span>frontend web</span>
-      dengan <span>desain yang rapi</span> dan
-      <span>pengalaman pengguna</span> yang matang. saat ini masih dalam tahap belajar
-      saya mengenal dasar-dasarnya untuk mencoba hal baru, dan belajar dari kesalahan supaya 
-      bisa terus berkembang dan bikin karya sendiri.
+  <!-- PROJECT -->
+  <section class="project-max" id="project">
+
+    <!-- FX -->
+    <div class="project-glow"></div>
+    <div class="project-grid"></div>
+    <div class="project-inner">
+      <h2 class="project-title glitch" data-text="MY PROJECTS">
+        MY PROJECTS
+      </h2>
+      <p class="project-sub">
+        My projects over the <span>this year</span>
       </p>
 
-      <!-- STATS -->
-      <div class="about-stats">
-        <div class="stat">
-          <h3>1+</h3>
-          <p>Years Learning</p>
+      <div class="project-cards">
+        <div class="project-card magnetic">
+          <img src="./picture/kopi.jpeg" alt="" class="project-img">
+          <h3>Coffee House</h3>
+          <p>radiohead modern dengan layout rapi, efek interaktif, dan yang dikenal
+            dengan eksplorasi musik yang inovatif dan atmosfer gelap yang menciptakan identitas musik.</p>
         </div>
-        <div class="stat">
-          <h3>21+</h3>
-          <p>Projects</p>
+        <div class="project-card magnetic">
+          <img src="./picture/radio.jpeg" alt="" class="project-img">
+          <h3>Radio Head</h3>
+          <p>radiohead modern dengan layout rapi, efek interaktif, dan yang dikenal
+            dengan eksplorasi musik yang inovatif dan atmosfer gelap yang menciptakan identitas musik.</p>
         </div>
-        <div class="stat">
-          <h3>∞</h3>
-          <p>Creativity</p>
-        </div>
-      </div>
-
-      <!-- SKILLS -->
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-      </div>
-      <a href="#project" class="btn magnetic">SEE MY WORK</a>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECT -->
-<section class="project-max" id="project">
-
-  <!-- FX -->
-  <div class="project-glow"></div>
-  <div class="project-grid"></div>
-  <div class="project-inner">
-    <h2 class="project-title glitch" data-text="MY PROJECTS">
-      MY PROJECTS
-    </h2>
-    <p class="project-sub">
-    My projects over the <span>this year</span>
-    </p>
-
-    <div class="project-cards">
-      <div class="project-card magnetic"> 
-      <div class="project-icon">☕</div>
-      <h3>Coffee House</h3>
-      <p>Website Coffee House dengan tampilan modern dan Menyajikan berbagai 
-       jenis kopi berkualitas dari biji pilihan Nusantara serta camilan lezat.</p>
-      <a href="/website Coffee House/index.html" class="project-btn project-link w-100"> VIEW PROJECT</a>
-    </div>
-      <div class="project-card magnetic">
-      <div class="project-icon">🖼️</div>
-      <h3>Gunung Rinjani</h3>
-      <p>website Desain gunung yang menyesuaikan ukuran layar dari desktop hingga 
-       mobile dan gunung berapi tertinggi kedua di Indonesia dengan ketinggian 3.726 meter.</p>
-      <a href="/website gunung/index.html" 
-      class="project-btn project-link w-100">VIEW PROJECT</a>
-    </div>
-      <div class="project-card magnetic">
-      <div class="project-icon">🎸</div>
-      <h3>Radio Head</h3>
-      <p>radiohead modern dengan layout rapi, efek interaktif, dan yang dikenal 
-       dengan eksplorasi musik yang inovatif dan atmosfer gelap yang menciptakan identitas musik.</p>
-      <a href="/website radiohead/index.html"
-      class="project-btn project-link w-100">VIEW PROJECT</a>
-    </div>
-    </div> <!-- END project-cards -->
+      </div> <!-- END project-cards -->
 
     </div> <!-- END project-inner -->
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section class="contact-max" id="contact">
+  <!-- CONTACT -->
+  <section class="contact-max" id="contact">
 
-  <!-- FX -->
-  <div class="contact-glow"></div>
-  <div class="contact-grid"></div>
-  <div class="contact-inner">
+    <!-- FX -->
+    <div class="contact-glow"></div>
+    <div class="contact-grid"></div>
+    <div class="contact-inner">
 
-    <h2 class="contact-title glitch" data-text="CONTACT ME">
-      CONTACT ME
-    </h2>
-    <p class="contact-sub">
-      Have a <span>project</span>, <span>idea</span>, or want to
-      <span>collaborate</span>? Let's talk.
-    </p>
-    <div class="contact-wrapper">
+      <h2 class="contact-title glitch" data-text="CONTACT ME">
+        CONTACT ME
+      </h2>
+      <p class="contact-sub">
+        Have a <span>project</span>, <span>idea</span>, or want to
+        <span>collaborate</span>? Let's talk.
+      </p>
+      <div class="contact-wrapper">
 
-      <!-- INFO -->
-      <div class="contact-info">
-        <div class="info-card magnetic">
-          <span>📧</span>
-          <h4>Email</h4>
-          <p>ferdiwiranata145@gmail.com</p>
+        <!-- INFO -->
+        <div class="contact-info">
+          <div class="info-card magnetic">
+            <span>📧</span>
+            <h4>Email</h4>
+            <p>ferdiwiranata145@gmail.com</p>
+          </div>
+          <div class="info-card magnetic">
+            <span>📱</span>
+            <h4>Phone</h4>
+            <p>+62 896-7904-6686</p>
+          </div>
+          <div class="info-card magnetic">
+            <span>📍</span>
+            <h4>Location</h4>
+            <p>Tangerang Selatan</p>
+          </div>
         </div>
-        <div class="info-card magnetic">
-          <span>📱</span>
-          <h4>Phone</h4>
-          <p>+62 896-7904-6686</p>
-        </div>
-        <div class="info-card magnetic">
-          <span>📍</span>
-          <h4>Location</h4>
-          <p>Tangerang Selatan</p>
-        </div>
+
+        <!-- FORM -->
+        <form class="contact-form magnetic" id="contactForm">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+
       </div>
-
-      <!-- FORM -->
-      <form class="contact-form magnetic" id="contactForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">SEND MESSAGE</button>
-      </form>
-
     </div>
-  </div>
-  <!-- NOTIFICATION -->
-  <div class="contact-toast" id="toast">
-    🚀 Message sent successfully!
-  </div>
-  
-  <footer>
-    &copy; CopyRight Ferdi Wiranata, 251011701016 - 2026
-  </b>
-  </footer>
+    <!-- NOTIFICATION -->
+    <div class="contact-toast" id="toast">
+      🚀 Message sent successfully!
+    </div>
 
-</section>
-    <!-- JS -->
-    <script src="script.js"></script>
+    <footer>
+      &copy; CopyRight Ferdi Wiranata, 251011701016 - 2026
+      </b>
+    </footer>
+
+  </section>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
+
 </html
